@@ -72,7 +72,7 @@ runs:
           --build-arg APP_BUILD_DATE=${{ env.BUILD_DATE }} \
           --build-arg APP_BUILD_TAG=${{ github.ref }} \
           --build-arg APP_GIT_COMMIT=${{ github.sha }} \
-          --build-arg APP_BRANCH=${{ steps.extract_release.outputs.release_name }} \
+          --build-arg APP_BRANCH=${{ steps.extract_branch.outputs.branch_name }} \
           --pull \
           --tag app .
 
